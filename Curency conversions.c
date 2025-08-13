@@ -18,9 +18,10 @@ printf("when dollars are converted to pounds:%f \n",pounds);
 printf("rupees:");
 scanf("%f", &rupees);
 
-dollars=rupees/60;
+dollars=rupees/48;
 printf("when Rs are converted to $:%f \n",dollars);
 
 
 
 }
+
