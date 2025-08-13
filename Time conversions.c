@@ -16,11 +16,12 @@ printf("when hr is converted to min:%f/n",min);
 printf("minutes:");
 scanf("%f", &min);
 
-hr=hr/60;
+hr=min/60;
 printf("when minutes are converted to hours:%f/n",hr);
 
 
 }
+
 
 
 
