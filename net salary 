@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    float basic, allowances, deductions, net;
+    printf("Enter basic salary, allowances and deductions: ");
+    scanf("%f %f %f", &basic, &allowances, &deductions);
+
+    net = basic + allowances - deductions;
+    printf("Net Salary = %.2f\n", net);
+    return 0;
+}
