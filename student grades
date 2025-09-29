@@ -9,7 +9,7 @@ int main() {
     if(m1 < 35 || m2 < 35 || m3 < 35) {
         printf("Result: Fail (less than 35 in one subject)\n");
     } else {
-        avg = (m1 + m2 + m3) / 3.0;
+        avg = (m1 + m2 + m3) / 3;
 
         if(avg >= 70)
             printf("Distinction\n");
@@ -22,5 +22,4 @@ int main() {
         else
             printf("Fail\n");
     }
-    return 0;
 }
