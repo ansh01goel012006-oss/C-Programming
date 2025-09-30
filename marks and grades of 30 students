@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int marks, i;
+    for(i = 1; i <= 30; i++) {
+        printf("Enter marks for student %d: ", i);
+        scanf("%d", &marks);
+        if(marks >= 75)
+            printf("Grade: Distinction\n");
+        else if(marks >= 60)
+            printf("Grade: First Division\n");
+        else if(marks >= 50)
+            printf("Grade: Second Division\n");
+        else if(marks >= 40)
+            printf("Grade: Third Division\n");
+        else
+            printf("Grade: Fail\n");
+    }
+    return 0;
+}
