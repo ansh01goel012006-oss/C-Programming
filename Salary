@@ -6,8 +6,6 @@ printf("ENTER GROSS SALARY :");
 scanf("%f",&salary);
 if(salary>10000)
 {
-
-
     allowances = (salary*10)/100;
     deduction = (salary*3)/100;
     net_salary = salary + allowances - deduction;
@@ -20,6 +18,7 @@ else{
     printf("THE NET SALARY IS %f",net_salary);
 }
 }
+
 
 
 
