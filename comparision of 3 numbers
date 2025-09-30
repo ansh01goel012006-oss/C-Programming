@@ -12,6 +12,7 @@ if(num1>num2)
 {
     if(num1>num3)
         printf("The Largest Number is:%f\n",num1);
+        printf("The Smallest Number is:%f\n",num2);
     else
          printf("The Largest Number is:%f\n",num3);
 }
@@ -23,4 +24,5 @@ else
         printf("The Largest Number is:%f\n",num3);
 }
 }
+
 
