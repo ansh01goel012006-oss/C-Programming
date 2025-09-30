@@ -13,5 +13,5 @@ int main() {
 
     net = gross - discount;
     printf("Net Sales = %.2f\n", net);
-    return 0;
+   
 }
