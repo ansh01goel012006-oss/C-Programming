@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10], num, i;
+    printf("Enter 9 elements:\n");
+    for(i=0; i<9; i++)
+        scanf("%d", &arr[i]);
+    printf("Enter new number for last position: ");
+    scanf("%d", &num);
+    arr[9] = num;
+    printf("Array after insertion:\n");
+    for(i=0; i<10; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+}
