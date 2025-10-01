@@ -12,13 +12,6 @@ int main() {
         printf("%d ", arr[i]);
     }
     printf("\n");
-    return 0;
+    
 }
 
-/*
-Sample Output:
-Enter 5 values:
-11 22 33 44 55
-You entered:
-11 22 33 44 55
-*/
