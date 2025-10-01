@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10], i, pos, num;
+    printf("Enter 9 elements:\n");
+    for(i=0; i<9; i++)
+        scanf("%d", &arr[i]);
+    printf("Enter position (0-9) to insert: ");
+    scanf("%d", &pos);
+    printf("Enter new number: ");
+    scanf("%d", &num);
+
+    // Shift right
+    for(i=9; i>pos; i--)
+        arr[i] = arr[i-1];
+    arr[pos] = num;
+
+    printf("Array after insertion:\n");
+    for(i=0; i<10; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+   
+}
