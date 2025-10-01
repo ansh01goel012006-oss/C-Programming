@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10], freq[10], visited = -1;
+    int i, j;
+    printf("Enter 10 values:\n");
+    for(i=0; i<10; i++)
+        scanf("%d", &arr[i]);
+    
+    for(i=0; i<10; i++) {
+        int count = 1;
+        for(j=i+1; j<10; j++) {
+            if(arr[i]==arr[j]) {
+                count++;
+                freq[j]=visited;
+            }
+        }
+        if(freq[i]!=visited)
+            freq[i] = count;
+    }
+    printf("Value\tFrequency\n");
+    for(i=0; i<10; i++) {
+        if(freq[i]!=visited)
+            printf("%d\t%d\n", arr[i], freq[i]);
+    }
+  
+}
