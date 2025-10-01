@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10], i;
+    printf("Enter 10 elements:\n");
+    for(i=0; i<10; i++)
+        scanf("%d", &arr[i]);
+    // Shift elements left
+    for(i=0; i<9; i++)
+        arr[i] = arr[i+1];
+    // Optionally set last value to 0 after delete
+    arr[9] = 0;
+
+    printf("Array after deleting first element:\n");
+    for(i=0; i<10; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+   
+}
