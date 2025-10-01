@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int arr[5], i;
+    printf("Enter up to 5 elements:\n");
+    for(i=0; i<5; i++)
+        scanf("%d", &arr[i]);
+    printf("Reversed array:\n");
+    for(i=4; i>=0; i--)
+        printf("%d ", arr[i]);
+    printf("\n");
+    return 0;
+}
+/*
+Sample Output:
+Enter up to 5 elements:
+2 4 6 8 10
+Reversed array:
+10 8 6 4 2
+*/
