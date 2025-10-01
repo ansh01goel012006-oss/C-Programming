@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10], value, i, found = 0;
+    printf("Enter 10 elements:\n");
+    for(i=0; i<10; i++)
+        scanf("%d", &arr[i]);
+    printf("Enter value to delete: ");
+    scanf("%d", &value);
+
+    for(i=0; i<10; i++) {
+        if(arr[i] == value && found == 0) {
+            found = 1;
+        }
+        if(found && i < 9) {
+            arr[i] = arr[i+1];
+        }
+    }
+    if(found)
+        arr[9] = 0; // fill last if delete succeeded
+
+    printf("Array after deletion:\n");
+    for(i=0; i<10; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+    
+}
+
