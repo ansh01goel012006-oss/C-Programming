@@ -1,0 +1,32 @@
+#include <stdio.h>
+#define MAX 3
+#define LEN 50
+
+int main() {
+    char *books[MAX];
+    char temp[LEN];
+    for(int i=0; i<MAX; i++) {
+        books[i] = (char*)malloc(LEN * sizeof(char));
+        printf("Enter name of book %d: ", i+1);
+        fgets(temp, LEN, stdin);
+
+        int j=0;
+        while(temp[j]!='
+' && temp[j]!='') {
+            books[i][j] = temp[j];
+            j++;
+        }
+        books[i][j]='';
+    }
+
+    printf("
+Book names are:
+");
+    for(int i=0; i<MAX; i++)
+        printf("%s
+", books[i]);
+    
+    for(int i=0; i<MAX; i++)
+        free(books[i]);
+    return 0;
+}
