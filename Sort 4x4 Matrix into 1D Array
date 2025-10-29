@@ -1,0 +1,32 @@
+#include <stdio.h>
+#define N 4
+
+void sort(int arr[], int n) {
+    int i, j, temp;
+    for(i=0;i<n-1;i++) {
+        for(j=0;j<n-i-1;j++) {
+            if(arr[j]>arr[j+1]) {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int mat[N][N] = { {9,3,6,8}, {2,7,5,1}, {4,11,13,12}, {10,14,15,16} };
+    int arr[N*N], k=0;
+    
+    for(int i=0;i<N;i++)
+        for(int j=0;j<N;j++)
+            arr[k++] = mat[i][j];
+
+    sort(arr, N*N);
+
+    printf("Sorted elements:
+");
+    for(int i=0;i<N*N;i++)
+        printf("%d ", arr[i]);
+    return 0;
+}
