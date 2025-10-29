@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#define SIZE 100
+
+int main() {
+    char name[SIZE];
+    printf("Enter a full name: ");
+    fgets(name, SIZE, stdin);
+    
+    // Remove newline
+    int len = strlen(name);
+    if(name[len-1]=='
+') name[len-1]='';
+
+    char *words[10];
+    int count=0;
+    char *p = strtok(name, " ");
+    while(p!=NULL) {
+        words[count++] = p;
+        p = strtok(NULL, " ");
+    }
+
+    for(int i=0; i<count-1; i++)
+        printf("%c. ", words[i][0]);
+    printf("%s
+", words[count-1]);
+    return 0;
+}
